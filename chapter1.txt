@@ -1,0 +1,17 @@
+git的学习：
+git是一个分布式管理仓库的工具。仓库也叫做reposity，简单理解即为目录。
+该目录的所有文件是用Git管理起来的。每个文件的修改，删除，Git都能追踪。
+通过Git既可以追踪文件的变动，还可以“还原”文件。
+
+实现步骤（如何使用Git管理一个文件夹）：
+1. 创建一个空的文件夹（仓库）。
+mkdir gitlearn
+
+2. 将该文件夹初始化为git管理的仓库
+git init   //必须在该空的文件夹中声明
+
+如何把文件添加至该仓库中（Git能够管理该文件）
+前提：已有一个readme.txt
+1. git add readme.txt   //add表示控制符  readme.txt表示被添加的文件
+2. git commit -m "wrote a readme.txt file"  //commit表示控制符  -m后面输入的是本次提交的说明“wrote a readme.txt file”，方便后面查阅
+
