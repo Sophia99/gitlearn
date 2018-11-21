@@ -14,3 +14,5 @@
 -> 撤销修改
 	git checkout - <file>
 	
+	
+	I don't like Zhuozhenyang.
