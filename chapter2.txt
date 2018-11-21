@@ -1,0 +1,16 @@
+--工作区和暂存区
+-> 工作区（Working Directory）
+	工作区是git管理的文件夹（目录）
+
+-> 版本库（Reposity）
+	1. 创建Reposity时，git会自动创建一个唯一的master分支；此后，所有的commit都是在该master分支上，添加分支。 
+	2. commit可以一次性提交很多个修改内容，被修改的内容，也就是急需要commit的部分，在没有commit之前都是存放在名为index（stage）的缓存区
+	
+-> 管理修改
+	git最大的优点是管理修改而非文件。
+	git add <file> //目的是将文件添加到缓存区，那么文件被重新修改了一次就需要添加git add一次，否则文件的改变不会再缓存区
+	git commit -m <string word>  //将缓存区（index）的内容提交到master的分支上。意味着，不在缓存区的文件改变不会被提交到分支上。
+	
+-> 撤销修改
+	git checkout - <file>
+	
