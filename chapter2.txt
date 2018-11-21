@@ -12,7 +12,7 @@
 	git commit -m <string word>  //将缓存区（index）的内容提交到master的分支上。意味着，不在缓存区的文件改变不会被提交到分支上。
 	
 -> 撤销修改
-	git checkout -- <file>
+	git checkout -- <file>  //把版本库（Reposity）里面的文件调出来
 	-> --很重要；git checkout <file>  //该指令是“切换到另一个分支”
 	-> 当被修改的文件不在缓存区时，使用上述的撤销修改文件后，回到最开始版本库Reposity的状态。
 	-> 当被修改的文件在缓存区时，使用上面的撤销修改文件后，回到最开始文件被添加到缓存区的状态。
@@ -23,3 +23,13 @@
 	
 --每次需要保存好txt文件后，再使用git管理文件的改变，不然git无法得知改变。
 
+-> 删除文件
+	rm <files>
+	--上面指令执行后，会导致Working Directory和Reposity不一致
+		-> 确实删除文件，使用
+			git rm <file>
+			git commit -m "  "
+		-> 删除错误，恢复文件
+			git checkout -- <file>
+			git checkout该指令其实使用版本库里面的版本替换工作区的版本，无论工作区是修改还是删除，都可以“一键还原”。
+	
