@@ -1,3 +1,18 @@
 --远程仓库
-	Git是分布式版本控制系统，同一个Git仓库，可以分不到不同的机器上。
-	Github网站是一个提供Git仓库托管服务的。
+	-> Git是分布式版本控制系统，同一个Git仓库，可以分不到不同的机器上。
+	-> Github网站是一个提供Git仓库托管服务的。
+	-> 在github上可以提交多个电脑的ssh key。
+	
+-> 添加远程库
+	git init //初始化仓库
+	git add <file> //添加文件到本地仓库
+	git commit -m " "  //添加文件描述信息
+	//git remote remove(rm) origin //取消本地目录（仓库）关联到远程仓库
+	git remote add origin +远程仓库地址  //链接本地目录到远程仓库，创建主分支
+	git pull origin master //把本地仓库的变换链接到远程仓库主分支
+	git push -u origin master //把本地仓库的文件推送到远程仓库  第一次的时候将本地仓库master和远程的空的master连接起来
+	//git push -u origin master -f //强制把本地仓库的文件推送到远程仓库
+	
+	只要本地有了修改，推送到远程的指令为：
+	git push origin master
+	
