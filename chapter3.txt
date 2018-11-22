@@ -3,7 +3,7 @@
 	-> Github网站是一个提供Git仓库托管服务的。
 	-> 在github上可以提交多个电脑的ssh key。
 	
--> 添加远程库
+-> 添加远程库(从本地仓库链接远程仓库)
 	git init //初始化仓库
 	git add <file> //添加文件到本地仓库
 	git commit -m " "  //添加文件描述信息
@@ -15,4 +15,10 @@
 	
 	只要本地有了修改，推送到远程的指令为：
 	git push origin master
+	
+-> 克隆远程仓库（从远程仓库copy到本地仓库）
+	git clone git@github.com:Sophia99/pcl.git //Git支持多种协议，Github的地址不止一个，使用https，但通过ssh支持的原生的git协议速度最快。
+	
+	
+	
 	
