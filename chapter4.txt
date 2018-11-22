@@ -1,2 +1,20 @@
 --分支管理
+	分支的存在是为了实现多方协作，多进程作战的需求。每个分支在合并之前，不能不想查看，安全。另外一个优点是上传速度快。
+	
 -> 创建与合并分支
+	Git对于每一次的提交，将所有提交的结果串成一条时间线，该时间线即为一条分支。
+	更正：HEAD指向的是master，主分支。master指向的最新的提交。
+	1. 创建分支dev，然后切换到dev分支：
+		git checkout -b dev
+		上面的命令相当于下面两个命令
+		git branch dev
+		git checkout dev
+		
+	2. 查看当前的分支：
+		git branch
+	a
+	3. 切换回到master分支：
+		git checkout master
+		
+	4. 将在dev分支上提交的内容合并到master
+		git merge dev
