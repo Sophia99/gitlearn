@@ -1,1 +1,44 @@
 --标签管理
+	场景：每个版本对应一个tag，包含时间。
+	特点：不能移动和方便提取（相比较于commit id号）
+	
+-> 创建标签
+	1. 在指定的分支上，打上标签（tag）：
+		$ git tag <name>
+		eg：git tag v1.0
+		
+	2. 查看所有标签：
+		$ git tag
+	
+	3. 处理场景：如果前面的时间点的tag没有被及时打上时
+		解决方案：找到特定时间点的commit id号
+		$ git tag <tag-name> <commit id>
+		
+	4. 查看标签信息，标签按照字母顺序排列：
+		$ git show <tag-name>
+		
+	5. 创建带有说明的标签  -a指定标签名，-m指定说明文字
+		$ git tag -a v2.0 -m "version 2 released" <commit id>
+		
+	6. tag和commit id联系在一块儿。如果该commit 即出现在master分支上，又出现在dev分支上，那么这两个分支上都可以看到该标签。
+	
+-> 操作标签
+	1. 处理场景：标签打错了。(本地标签)
+		解决方案：
+		$ git tag -d <tag-name>
+		$ git push origin <tag-name>  //推送某个标签到远程
+		$ git push origin -tags   //一次性推送所有的本地标签
+		
+	2. 处理场景：远程的标签需要删除
+		解决方案：
+		>>>先删除本地的tags
+		$ git tag -d <tag-name>
+		>>>然后从远程删除
+		$ git push origin :refs/tags/<tag-name>
+
+-> Github
+	1. Github为免费的远程仓库
+	2. 利用了Git强大的clone和sub branch能力
+	3. 开源项目的仓库要接受你的推送，需要发起一个pull request
+	4. Github上可以任意fork开源仓库
+		
